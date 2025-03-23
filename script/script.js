@@ -12,3 +12,22 @@ document.addEventListener("DOMContentLoaded", function () {
   changeBackground();
   setInterval(changeBackground, 5000);
 });
+/* about me */
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".progress");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          bar.style.width = bar.getAttribute("data-percent");
+          observer.unobserve(bar);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  progressBars.forEach((bar) => observer.observe(bar));
+});
