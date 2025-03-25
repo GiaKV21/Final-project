@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const images = ["img/picture1.jpg", "img/picture2.jpg", "img/picture3.jpg"];
+  const images = ["img/slide1.jfif", "img/slide2.jfif"];
 
   let index = 0;
   const slider = document.querySelector(".background-slider");

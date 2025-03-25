@@ -12,7 +12,7 @@ body {
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: stretch;
   z-index: -1;
   transition: background-image 1s ease-in-out;
@@ -65,7 +65,7 @@ body {
 .section-title .big-number {
   font-size: 90px;
   font-weight: 900;
-  color: black;
+  color: rgb(97, 94, 94);
   line-height: 1;
   position: relative;
   z-index: 1;
@@ -78,7 +78,7 @@ body {
   letter-spacing: 2px;
   right: 0;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: bold;
   color: #111;
   z-index: 2;
   white-space: nowrap;
@@ -170,11 +170,10 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  margin-top: 60px;
+  margin-top: 150px;
   padding: 0 40px;
 }
 
-.about-left,
 .about-center,
 .about-right {
   flex: 1;
@@ -182,7 +181,12 @@ body {
   max-width: 320px;
   text-align: center;
 }
-
+.about-left {
+  text-align: right;
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+}
 /* About Left */
 .about-left h2 {
   font-size: 28px;
@@ -202,6 +206,8 @@ body {
 }
 
 .hire-me {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: bold;
   background-color: #e94e77;
   color: white;
   padding: 10px 24px;
@@ -219,6 +225,7 @@ body {
 .about-center img {
   width: 280px;
   border-radius: 10px;
+  height: 400px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -254,4 +261,36 @@ body {
   height: 100%;
   background-color: #e94e77;
   transition: width 1.5s ease;
+}
+/* social icons */
+.networks-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.network-box {
+  margin-top: 50px;
+  background-color: rgb(239, 239, 239);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+
+.network-box:hover {
+  background-color: #15263e;
+}
+
+.network-icon {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.2s ease-in-out;
+}
+
+.network-icon:hover {
+  filter: invert(200%) brightness(100%);
 }
