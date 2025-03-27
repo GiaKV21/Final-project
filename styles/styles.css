@@ -170,7 +170,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  margin-top: 150px;
+  margin-top: 90px;
   padding: 0 40px;
 }
 
@@ -223,9 +223,9 @@ body {
 
 /* About Center */
 .about-center img {
-  width: 280px;
+  width: 320px;
   border-radius: 10px;
-  height: 400px;
+  height: 450px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -236,7 +236,7 @@ body {
 
 /* About Right (Skills) */
 .skill {
-  margin-bottom: 20px;
+  margin-top: 15px;
   text-align: left;
 }
 
@@ -293,4 +293,284 @@ body {
 
 .network-icon:hover {
   filter: invert(200%) brightness(100%);
+}
+/* contact stipe */
+.contact-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f1436;
+  padding: 30px 15px;
+  flex-wrap: wrap;
+  color: white;
+  margin-top: 80px;
+}
+
+.contact-box {
+  margin: 10px 20px;
+  max-width: 400px;
+}
+
+.icon-and-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border: 2px dashed white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+.icon-circle:hover {
+  background-color: #e74c57;
+}
+
+.icon-circle img {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.3s ease;
+}
+
+.icon-circle:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.icon-circle img {
+  width: 20px;
+  height: 20px;
+}
+
+.text-content h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.text-content p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+/* services */
+.services-section {
+  padding: 100px 20px;
+  text-align: center;
+  overflow: visible; /* Ensures flipped cards aren't clipped */
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 230px);
+  gap: 3px;
+  justify-content: center;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.service-box {
+  width: 230px;
+  height: 270px;
+  perspective: 1000px;
+}
+
+.service-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.service-box:hover .service-inner {
+  transform: rotateY(180deg);
+}
+
+.service-front,
+.service-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: rgb(237, 237, 237);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.service-front img {
+  width: 40px;
+  margin-bottom: 15px;
+}
+@font-face {
+  font-family: "Glacial Indifference";
+  src: url("../fonts/GlacialIndifference-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.service-front h3 {
+  font-size: 18px;
+  color: #0f1436;
+  margin: 0;
+  font-weight: normal;
+  font-family: "Glacial Indifference", sans-serif;
+}
+
+.service-back {
+  background-color: #0f1436;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.6;
+}
+/* feedback section */
+.rec-slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background image behind everything */
+.rec-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  z-index: 0;
+}
+
+/* Foreground container over the image */
+.rec-slider-container {
+  position: relative;
+  z-index: 1;
+  color: white;
+  margin-left: 130px;
+}
+
+/* All inner elements in a row: text, photo, info */
+.rec-slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* LEFT: Testimonial text */
+.rec-recommendation-text {
+  width: 350px; /* 👈 set fixed width */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: right;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* CENTER: Photo + info as a group */
+.rec-profile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+/* Center: Circular image */
+.rec-photo-container {
+  width: 130px;
+  height: 130px;
+  border: 3px dashed white;
+  border-radius: 50%;
+  background-color: #bd7570;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.rec-profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* RIGHT: Info text */
+.rec-info {
+  width: 180px; /* adjust based on your design */
+  flex-shrink: 0;
+}
+
+.quote-icon {
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0;
+  color: white;
+}
+
+.rec-profession {
+  font-size: 0.9rem;
+  color: #e94b59;
+  margin: 0;
+}
+
+.rec-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* FAR RIGHT: Vertical navigation dots */
+.rec-slider-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 40px;
+}
+
+.rec-slider-btn {
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.rec-slider-btn.rec-active {
+  background-color: #e94b59; /* 👈 your active color */
+  border-color: #e94b59;
+  opacity: 1;
+}
+.fade {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease-in-out;
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
