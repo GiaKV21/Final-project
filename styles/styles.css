@@ -446,7 +446,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* Background image behind everything */
 .rec-bg-image {
   position: absolute;
   inset: 0;
@@ -457,7 +456,6 @@ body {
   z-index: 0;
 }
 
-/* Foreground container over the image */
 .rec-slider-container {
   position: relative;
   z-index: 1;
@@ -465,7 +463,6 @@ body {
   margin-left: 130px;
 }
 
-/* All inner elements in a row: text, photo, info */
 .rec-slide-content {
   display: flex;
   align-items: center;
@@ -477,9 +474,8 @@ body {
   box-sizing: border-box;
 }
 
-/* LEFT: Testimonial text */
 .rec-recommendation-text {
-  width: 350px; /* 👈 set fixed width */
+  width: 350px;
   font-size: 1.1rem;
   line-height: 1.8;
   text-align: right;
@@ -487,7 +483,6 @@ body {
   flex-shrink: 0;
 }
 
-/* CENTER: Photo + info as a group */
 .rec-profile {
   display: flex;
   align-items: center;
@@ -495,7 +490,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Center: Circular image */
 .rec-photo-container {
   width: 130px;
   height: 130px;
@@ -516,9 +510,8 @@ body {
   border-radius: 50%;
 }
 
-/* RIGHT: Info text */
 .rec-info {
-  width: 180px; /* adjust based on your design */
+  width: 180px;
   flex-shrink: 0;
 }
 
@@ -541,7 +534,6 @@ body {
   margin: 0;
 }
 
-/* FAR RIGHT: Vertical navigation dots */
 .rec-slider-buttons {
   display: flex;
   flex-direction: column;
@@ -561,7 +553,7 @@ body {
 }
 
 .rec-slider-btn.rec-active {
-  background-color: #e94b59; /* 👈 your active color */
+  background-color: #e94b59;
   border-color: #e94b59;
   opacity: 1;
 }
