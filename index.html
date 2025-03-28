@@ -8,8 +8,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Lato&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="background-slider"></div>
@@ -190,7 +193,6 @@
       </div>
     </section>
     <section class="services-section">
-      <h2 class="section-title">My Services</h2>
       <div class="services-grid">
         <div class="service-box">
           <div class="service-inner">
@@ -346,7 +348,71 @@
         </div>
       </div>
     </section>
+    <section id="latest-projects">
+      <h1 class="section-name-latest-projects">Latest Projects</h1>
+      <div class="projects-wrapper">
+        <div class="categories">
+          <ul>
+            <li class="active" data-filter="all">All</li>
+            <li data-filter="work">Work ideas</li>
+            <li data-filter="mockup">Mockup</li>
+            <li data-filter="psd">PSD Design</li>
+            <li data-filter="logo">Logo</li>
+            <li data-filter="presentation">Presentation</li>
+            <li data-filter="icons">Icons</li>
+          </ul>
+        </div>
 
+        <div class="projects-grid">
+          <div class="project-item" data-category="work">
+            <div class="overlay">
+              <span class="heart">&#10084;</span>
+              <span>2 months ago</span>
+              <p>Work Idea</p>
+            </div>
+          </div>
+
+          <div class="project-item-gray" data-category="mockup">
+            <div class="overlay">
+              <span class="heart">&#10084;</span>
+              <span>9 months ago</span>
+              <p>3D Mockup Design</p>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="psd">
+            <div class="overlay">
+              <span class="heart">&#10084;</span>
+              <span>5 months ago</span>
+              <p>Landing Page PSD</p>
+            </div>
+          </div>
+          <div class="project-item-gray" data-category="logo">
+            <div class="overlay">
+              <span class="heart">&#10084;</span>
+              <span>1 year ago</span>
+              <p>Logo Design</p>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="presentation">
+            <div class="overlay">
+              <span class="heart">&#10084;</span>
+              <span>3 weeks ago</span>
+              <p>Pitch Presentation</p>
+            </div>
+          </div>
+
+          <div class="project-item-gray" data-category="icons">
+            <div class="overlay">
+              <span class="heart">&#10084;</span>
+              <span>6 months ago</span>
+              <p>Custom Icons</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="script/script.js"></script>
   </body>
 </html>

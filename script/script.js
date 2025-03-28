@@ -35,21 +35,21 @@ document.addEventListener("DOMContentLoaded", () => {
 const slides = [
   {
     text: "Exceptional service and creative solutions! The team went above and beyond to meet our needs.",
-    photo: "photo1.jpg",
+    photo: "img/d3.svg",
     profession: "Graphic Designer",
-    name: "Mau Thomas",
+    name: "Irma Sokhadze",
   },
   {
     text: "A fantastic experience from start to finish. Their attention to detail is unmatched!",
-    photo: "photo2.jpg",
+    photo: "img/d4.svg",
     profession: "Marketing Manager",
-    name: "Alex Carter",
+    name: "Gia SuramelaShvili",
   },
   {
     text: "Highly recommend! They delivered exactly what we envisioned, on time and within budget.",
-    photo: "photo3.jpg",
+    photo: "img/d5.svg",
     profession: "Web Developer",
-    name: "Sam Rivera",
+    name: "Merab Sephashvili",
   },
 ];
 
@@ -88,3 +88,27 @@ buttons.forEach((button, index) => {
 });
 
 updateSlide(0);
+/* final projects */
+const filterButtons = document.querySelectorAll(".categories li");
+const projectItems = document.querySelectorAll(
+  ".project-item, .project-item-gray"
+);
+
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Remove active class from all
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filterValue = btn.getAttribute("data-filter");
+
+    projectItems.forEach((item) => {
+      const itemCategory = item.getAttribute("data-category");
+      if (filterValue === "all" || filterValue === itemCategory) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
