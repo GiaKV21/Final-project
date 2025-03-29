@@ -96,7 +96,6 @@ const projectItems = document.querySelectorAll(
 
 filterButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    // Remove active class from all
     filterButtons.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
 
@@ -104,11 +103,76 @@ filterButtons.forEach((btn) => {
 
     projectItems.forEach((item) => {
       const itemCategory = item.getAttribute("data-category");
-      if (filterValue === "all" || filterValue === itemCategory) {
-        item.style.display = "block";
+
+      if (filterValue === "all" || itemCategory === filterValue) {
+        item.classList.remove("hidden");
       } else {
-        item.style.display = "none";
+        item.classList.add("hidden");
       }
     });
+  });
+});
+/* contact form */
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const modal = document.getElementById("successModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  // Show modal
+  const showModal = () => {
+    modal.style.display = "flex";
+  };
+
+  // Hide modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Submit handler
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      website: form.website.value.trim(),
+      message: form.message.value.trim(),
+    };
+
+    const mainURL = "https://borjomi.loremipsum.ge/api/send-message";
+    const backupURL = "https://jsonplaceholder.typicode.com/posts";
+
+    try {
+      const response = await fetch(mainURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.status === 1) {
+        showModal();
+      } else {
+        throw new Error("Primary failed. Switching to backup...");
+      }
+    } catch (error) {
+      // Fallback to backup API
+      try {
+        await fetch(backupURL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            title: formData.name,
+            body: formData.message,
+            userId: 1,
+          }),
+        });
+        showModal();
+      } catch (backupError) {
+        console.error("Both endpoints failed", backupError);
+        alert("Something went wrong. Please try again later.");
+      }
+    }
   });
 });
