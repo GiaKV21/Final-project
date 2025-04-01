@@ -1,8 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  max-width: 100%;
-  overflow-x: hidden;
+  font-family: "Segoe UI", sans-serif;
 }
 
 /* Background Slider */
@@ -724,20 +723,27 @@ body {
 
 .article-row {
   display: flex;
-  padding-left: 90px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  justify-content: flex-end;
 }
 .article-row-middle {
   display: flex;
-  padding-right: 90px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 .article-box-light {
-  width: 40%;
+  width: 45%;
   background: #f9f8f6;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 30px;
   gap: 10px;
-  padding: 59px;
 }
 .icon-wrap {
   width: 50px;
@@ -768,7 +774,7 @@ body {
 }
 
 .description {
-  font-size: 14px;
+  font-size: 18px;
   color: #555;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -799,7 +805,13 @@ body {
   text-align: center;
   writing-mode: sideways-lr;
 }
-
+.spacer {
+  width: 46%;
+}
+.spacer img {
+  width: 100%;
+  object-fit: cover;
+}
 /* Rosa Team */
 
 .team-section {
@@ -947,7 +959,7 @@ body {
 /* === Form Styling === */
 .contact-form {
   width: 100%;
-  max-width: 1100px; /* increased size */
+  max-width: 1100px;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -1028,7 +1040,7 @@ body {
   background-color: #282828;
   color: #ccc;
   text-align: center;
-  padding: 60px 20px 30px; /* extra space for copyright */
+  padding: 60px 20px 30px;
   font-family: "Open Sans", sans-serif;
 }
 
