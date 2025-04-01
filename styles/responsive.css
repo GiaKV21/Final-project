@@ -1,0 +1,213 @@
+/* =========================== */
+/*      RESPONSIVE CSS        */
+/* =========================== */
+
+/* Global fix for horizontal scroll */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Tablet Devices (Portrait and Landscape) */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 30px;
+  }
+
+  .content {
+    right: 30px;
+    max-width: 300px;
+  }
+
+  .section-title .big-number {
+    font-size: 60px;
+    right: 20px;
+  }
+
+  .section-title .label {
+    font-size: 22px;
+    top: 18px;
+  }
+
+  .about-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-left,
+  .about-right,
+  .about-center {
+    text-align: center !important;
+  }
+
+  .rec-slide-content {
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .rec-slider-buttons {
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .article-row,
+  .article-row-middle {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .article-box,
+  .spacer,
+  .timeline {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .projects-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categories ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-form .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+  .about-section {
+    padding: 20px;
+    height: auto;
+  }
+
+  .logo {
+    position: static;
+    text-align: center;
+  }
+
+  .section-title {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .section-title .big-number,
+  .section-title .label {
+    position: static;
+    display: block;
+    text-align: center;
+  }
+
+  .content {
+    position: static;
+    transform: none;
+    margin: 0 auto 40px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .client-satisfaction {
+    position: static;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .about-layout {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  .about-center img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .networks-wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-strip {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rec-slide-content {
+    padding: 40px 20px;
+  }
+
+  .rec-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-item,
+  .project-item-gray {
+    width: 90%;
+  }
+
+  .section-name-latest-projects {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .categories li {
+    width: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .team-section .icon-row {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .contact-container h2 {
+    font-size: 32px;
+  }
+
+  .contact-container .subtitle {
+    font-size: 16px;
+  }
+
+  .footer-logo {
+    font-size: 32px;
+  }
+
+  .footer-desc {
+    font-size: 14px;
+  }
+
+  .copyright-bar {
+    padding: 20px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
