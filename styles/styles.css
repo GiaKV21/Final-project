@@ -15,7 +15,11 @@ body {
   background-size: cover;
   background-position: stretch;
   z-index: -1;
-  transition: background-image 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+.background-slider.fade-out {
+  opacity: 0;
 }
 
 /* About Section */
@@ -293,6 +297,9 @@ body {
 
 .network-icon:hover {
   filter: invert(200%) brightness(100%);
+}
+.hire-me-mobile {
+  display: none;
 }
 /* contact stipe */
 .contact-strip {

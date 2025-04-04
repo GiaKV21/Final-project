@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   const images = ["img/slide1.jfif", "img/slide2.jfif"];
-
   let index = 0;
   const slider = document.querySelector(".background-slider");
 
   function changeBackground() {
-    slider.style.backgroundImage = `url(${images[index]})`;
-    index = (index + 1) % images.length;
+    slider.classList.add("fade-out");
+    setTimeout(() => {
+      slider.style.backgroundImage = `url(${images[index]})`;
+      slider.classList.remove("fade-out");
+      index = (index + 1) % images.length;
+    }, 500);
   }
 
   changeBackground();
