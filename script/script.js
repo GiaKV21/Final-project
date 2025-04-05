@@ -160,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error("Primary failed. Switching to backup...");
       }
     } catch (error) {
-      // Fallback to backup API
       try {
         await fetch(backupURL, {
           method: "POST",

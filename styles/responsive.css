@@ -1,4 +1,4 @@
-/* ============== TABLETS (≤ 1024px) ============== */
+/*TABLETS (< 1024px) */
 @media (max-width: 1024px) {
   .about-section {
     position: relative;
@@ -226,7 +226,7 @@
   }
 }
 
-/* ============== MOBILES (≤ 768px) ============== */
+/*  MOBILES (<768px) */
 @media (max-width: 768px) {
   .about-section {
     padding: 20px 15px;
